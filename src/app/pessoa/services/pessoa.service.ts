@@ -46,8 +46,12 @@ export class PessoaService {
 
     //varre a lista de pessoas
     //quand encontra a pessoa com o mesmo id altera a lista
+    //A função forEach é usada para iterar sobre cada objeto  no array.
+    //Para cada objeto Pessoa, a função de callback é chamada com três parâmetros:
+    // obj (o objeto atual), index (o índice do objeto atual) e objs (o array completo de objetos).
     pessoas.forEach((obj, index, objs) => {
-      if(pessoa.id ===obj.id) {
+    //Verifica se o ID do objeto Pessoa passado como parâmetro é igual ao ID do objeto Pessoa atual no loop.
+      if(pessoa.id === obj.id) {
         objs[index] = pessoa
       }
     });
