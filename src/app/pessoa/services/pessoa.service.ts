@@ -13,12 +13,9 @@ export class PessoaService {
   listarTodos(): Pessoa[]{
     const pessoas = localStorage[LS_CHAVE];
 
-    //return pessoas ? JSON.parse(pessoas) : [];
+    return pessoas ? JSON.parse(pessoas) : [];
 
-    return [ 
-      new Pessoa(1, "teste1", 20),
-      new Pessoa(2, "teste2", 21)
-    ];
+    
   }
 
   inserir(pessoa : Pessoa) : void {
