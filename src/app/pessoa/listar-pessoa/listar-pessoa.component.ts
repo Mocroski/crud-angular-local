@@ -24,7 +24,7 @@ export class ListarPessoaComponent implements OnInit {
   remover($event: any, pessoa: Pessoa) : void{
     //evita o comportamento default do link, no caso ir para #
     $event.preventDefault();
-    if(confirm(`Deseja remover a pessoa $ {pessoa.nome}?`)){
+    if(confirm(`Deseja remover a pessoa ${pessoa.nome}?`)){
       this.pessoaService.remover(pessoa.id!);
       this.pessoas = this.listarTodos();
     }

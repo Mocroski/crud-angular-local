@@ -26,9 +26,9 @@ export class EditarPessoaComponent implements OnInit {
     const res = this.pessoaService.buscarPorId(id);
     if(res !== undefined)
       this.pessoa = res;
-      else
+      else{
       throw new Error("Pessoa não encontrada: id = " + id)
-    
+      }
   }
 
   atualizar(): void {

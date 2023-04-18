@@ -26,10 +26,10 @@ export class EnderecoService {
     localStorage[LS_CHAVE] = JSON.stringify(enderecos);
   }
 
-  buscarPorRua(rua : string): Endereco | undefined{
+  buscarPorId(id : number): Endereco | undefined{
     const enderecos: Endereco[] = this.listarTodos();
 
-    return enderecos.find(endereco => endereco.rua === rua)
+    return enderecos.find(endereco => endereco.id === id)
   };
 
   atualizar(endereco : Endereco) : void{
@@ -40,5 +40,15 @@ export class EnderecoService {
         objs[index] = endereco
       }
     });
+
+    localStorage[LS_CHAVE] = JSON.stringify(enderecos);
+  }
+
+  remover(id: number):void{
+    let enderecos : Endereco[] = this.listarTodos();
+
+    enderecos = enderecos.filter(endereco => endereco.id !== id);
+
+    localStorage[LS_CHAVE] = JSON.stringify(enderecos);
   }
 }
