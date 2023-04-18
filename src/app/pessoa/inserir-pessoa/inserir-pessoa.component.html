@@ -35,10 +35,11 @@
             <input type="text" class="form-control" id="dataNascimento" name="dataNascimento"
             [(ngModel)]="pessoa.dataNascimento"
             #dataNascimento="ngModel"
+            mask="d0/M0/0000"
              required>
             <div *ngIf="dataNascimento.errors && (dataNascimento.dirty || dataNascimento.touched)"
                 class="alert alert-danger">
-                <div [hidden]="!dataNascimento.errors?.['required']">Digite a dataNascimento da Pessoa. </div>
+                <div [hidden]="!dataNascimento.errors?.['required']">Digite a Data de Nascimento no formato dd/MM/yyyy. </div>
             </div>
         </div>
 

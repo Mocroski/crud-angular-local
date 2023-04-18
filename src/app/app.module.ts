@@ -9,6 +9,8 @@ import { ListarCidadeComponent } from './cidade/listar-cidade/listar-cidade.comp
 import { CidadeModule } from './cidade/cidade.module';
 import { NumericoDirective } from './shared/directives/numerico.directive';
 import { MinimoValidatorDirective } from './shared/directives/minimo-validator.directive';
+import { MeuPipePipe } from './shared/pipes/meu-pipe.pipe';
+import { SharedModule } from './shared';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { MinimoValidatorDirective } from './shared/directives/minimo-validator.d
     AppRoutingModule,
     PessoaModule, 
     EnderecoModule,
-    CidadeModule
+    CidadeModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

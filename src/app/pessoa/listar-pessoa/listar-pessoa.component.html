@@ -15,9 +15,9 @@
         </tr>
         
         <tr *ngFor="let pessoa of pessoas">
-        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.nome! | caixaAlta}}</td>
         <td>{{pessoa.idade}}</td>
-        <td>{{pessoa.dataNascimento}}</td>
+        <td>{{pessoa.dataNascimento! | mask: 'd0/M0/0000'}}</td>
         <td class="text-center" style="width: 300px;">
         <a [routerLink]="['/pessoas/editar', pessoa.id]" 
         href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info">

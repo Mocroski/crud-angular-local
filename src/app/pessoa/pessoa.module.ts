@@ -8,21 +8,24 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NumericoDirective } from '../shared/directives/numerico.directive';
 import { MinimoValidatorDirective } from '../shared/directives/minimo-validator.directive';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { MeuPipePipe } from '../shared/pipes/meu-pipe.pipe';
+import { SharedModule } from '../shared';
 
-
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 @NgModule({
   declarations: [
     InserirPessoaComponent,
     EditarPessoaComponent,
-    ListarPessoaComponent,
-    NumericoDirective,
-    MinimoValidatorDirective
+    ListarPessoaComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forRoot(),
+    SharedModule
   ],
   providers: [
     PessoaService
