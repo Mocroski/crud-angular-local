@@ -13,8 +13,7 @@ import { MinimoValidatorDirective } from './shared/directives/minimo-validator.d
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MinimoValidatorDirective
+    AppComponent
    
   ],
   imports: [
