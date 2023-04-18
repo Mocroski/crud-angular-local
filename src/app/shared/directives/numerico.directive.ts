@@ -22,6 +22,8 @@ export class NumericoDirective implements ControlValueAccessor{
 
     valor = valor.replace(/[\D]/g, '');
     $event.target.value = valor;
+
+    this.onChange(valor);
   }
 
   registerOnChange(fn: any): void {
