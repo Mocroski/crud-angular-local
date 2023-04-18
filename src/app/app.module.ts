@@ -7,6 +7,7 @@ import { PessoaModule } from './pessoa/pessoa.module';
 import { EnderecoModule } from './endereco/endereco.module';
 import { ListarCidadeComponent } from './cidade/listar-cidade/listar-cidade.component';
 import { CidadeModule } from './cidade/cidade.module';
+import { NumericoDirective } from './shared/directives/numerico.directive';
 
 
 @NgModule({

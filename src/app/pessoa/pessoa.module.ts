@@ -6,6 +6,7 @@ import { ListarPessoaComponent } from './listar-pessoa/listar-pessoa.component';
 import { PessoaService } from './services/pessoa.service';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NumericoDirective } from '../shared/directives/numerico.directive';
 
 
 
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     InserirPessoaComponent,
     EditarPessoaComponent,
-    ListarPessoaComponent
+    ListarPessoaComponent,
+    NumericoDirective
   ],
   imports: [
     CommonModule,
