@@ -11,6 +11,10 @@ import { NumericoDirective } from './shared/directives/numerico.directive';
 import { MinimoValidatorDirective } from './shared/directives/minimo-validator.directive';
 import { MeuPipePipe } from './shared/pipes/meu-pipe.pipe';
 import { SharedModule } from './shared';
+import { ListarEstadoComponent } from './estado/listar-estado/listar-estado.component';
+import { EditarEstadoComponent } from './estado/editar-estado/editar-estado.component';
+import { InserirEstadoComponent } from './estado/inserir-estado/inserir-estado.component';
+import { EstadoModule } from './estado/estado.module';
 
 
 @NgModule({
@@ -24,6 +28,7 @@ import { SharedModule } from './shared';
     PessoaModule, 
     EnderecoModule,
     CidadeModule,
+    EstadoModule,
     SharedModule
   ],
   providers: [],

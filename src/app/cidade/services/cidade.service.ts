@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Cidade } from 'src/app/shared/models/cidade.model';
-import { Endereco } from 'src/app/shared/models/endereco.model';
 
 
 const LS_CHAVE: string = "cidades";

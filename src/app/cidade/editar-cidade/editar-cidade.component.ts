@@ -13,14 +13,13 @@ export class EditarCidadeComponent implements OnInit {
 
   @ViewChild("formCidade") formCidade!: NgForm;
   cidade!: Cidade;
-  estado!: Cidade;
 
   constructor(private cidadeService: CidadeService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit( ): void {
-    
+
     let id = +this.route.snapshot.params['id'];
 
     const res = this.cidadeService.buscaPorId(id);
