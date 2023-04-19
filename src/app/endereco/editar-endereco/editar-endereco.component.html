@@ -37,6 +37,7 @@
                   [(ngModel)]="endereco.numero"
                   #numero="ngModel"
                   minlength="2"
+                  numerico
                   required
                 />
                 <div
@@ -108,8 +109,9 @@
                   name="cep"
                   [(ngModel)]="endereco.cep"
                   #cep="ngModel"
-                  minlength="8"
-                  maxlength="8"
+                  minlength="9"
+                  maxlength="9"
+                  mask="00000-000"
                   required
                 />
                 <div
