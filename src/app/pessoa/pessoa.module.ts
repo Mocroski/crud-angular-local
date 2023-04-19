@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { SharedModule } from '../shared';
+import { ModalPessoaComponent } from './modal-pessoa/modal-pessoa.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -15,14 +17,16 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
   declarations: [
     InserirPessoaComponent,
     EditarPessoaComponent,
-    ListarPessoaComponent
+    ListarPessoaComponent,
+    ModalPessoaComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     NgxMaskModule.forRoot(),
-    SharedModule
+    SharedModule,
+    MatDialogModule
   ],
   providers: [
     PessoaService

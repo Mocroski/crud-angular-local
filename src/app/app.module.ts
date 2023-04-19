@@ -15,12 +15,12 @@ import { ListarEstadoComponent } from './estado/listar-estado/listar-estado.comp
 import { EditarEstadoComponent } from './estado/editar-estado/editar-estado.component';
 import { InserirEstadoComponent } from './estado/inserir-estado/inserir-estado.component';
 import { EstadoModule } from './estado/estado.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
-    AppComponent
-   
+    AppComponent   
   ],
   imports: [
     BrowserModule,
@@ -29,7 +29,8 @@ import { EstadoModule } from './estado/estado.module';
     EnderecoModule,
     CidadeModule,
     EstadoModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
