@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Endereco } from 'src/app/shared/models/endereco.model';
 
-const LS_CHAVE: string = "enderecos";
+const LS_CHAVE: any = "enderecos";
 
 @Injectable({
   providedIn: 'root'

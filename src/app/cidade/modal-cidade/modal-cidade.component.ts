@@ -7,7 +7,8 @@ import { Cidade } from 'src/app/shared';
   templateUrl: './modal-cidade.component.html',
   styleUrls: ['./modal-cidade.component.css']
 })
-export class ModalCidadeComponent{
+export class ModalCidadeComponent implements OnInit{
+ 
 
   constructor(
       public dialogRef: MatDialogRef<ModalCidadeComponent>,
@@ -18,4 +19,15 @@ export class ModalCidadeComponent{
     this.dialogRef.close();
   }
 
+  ngOnInit(): void {
+    console.log(this.data);
+   
+  }
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+  
 }
+
+
+
+

@@ -7,6 +7,7 @@
       <p>Cep: {{ data.cep}}</p>
       <p>Cidade: {{ data.cidade}}</p>
       <p>Estado: {{ data.estado}}</p>
+      <p>Tipo de Endereço: {{ data.residencial! ? "Residencial" : "Comercial" }} </p>
     </div>
     <div mat-dialog-actions>
       <button mat-button (click)="fechar()">Fechar</button>

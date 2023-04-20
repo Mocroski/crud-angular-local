@@ -168,8 +168,18 @@
                   <div [hidden]="!estado.errors?.['minlength']">
                     O estado deve conter no minimo 4 caracteres.
                   </div>
+                  
                 </div>
+                <div class="form-group">
+                  <label for="residencial">Residencial:</label>
+                  <input type="checkbox" class="form-check-input"
+                  id="residencial" name="residencial"
+                  [(ngModel)]="endereco.residencial"
+                  #residencial="ngModel">
+                  </div>
               </div>
+
+              
 
               <br>
 

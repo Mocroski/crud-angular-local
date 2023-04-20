@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { MinimoValidatorDirective, NumericoDirective } from './directives';
 import { MeuPipePipe } from './pipes';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,16 +14,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MinimoValidatorDirective,
     NumericoDirective,
     MeuPipePipe,
-    NavbarComponent
+    NavbarComponent,
   ],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, MatMenuModule],
   exports: [
     MinimoValidatorDirective,
     NumericoDirective,
     MeuPipePipe,
-    NavbarComponent
-  ]
+    NavbarComponent,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

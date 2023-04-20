@@ -10,6 +10,7 @@
       <th>Cep</th>
       <th>Cidade</th>
       <th>Estado</th>
+      <th>Tipo de Endereço</th>
       <th class="text-center">
         <a
           [routerLink]="['/enderecos/novo']"
@@ -31,6 +32,7 @@
       <td>{{ endereco.cep }}</td>
       <td>{{ endereco.cidade }}</td>
       <td>{{ endereco.estado }}</td>
+      <td> {{endereco.residencial! ? "Residencial" : "Comercial"}} </td>
       <td class="text-center">
         <a
           mat-raised-button

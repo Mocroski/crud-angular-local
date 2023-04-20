@@ -1,9 +1,9 @@
 <h1>Novo Cidade</h1>
 
 <div class="well">
-  <form #formCidade="ngForm">
+  <form ngForm #formCidade="ngForm">
     <div class="form-group">
-      <label for="nome">nome:</label>
+      <label for="nome">Nome:</label>
       <input
         type="text"
         class="form-control"
@@ -25,29 +25,14 @@
       </div>
     </div>
 
-        <div class="form-group">
-          <label for="estado">Estado:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="estado"
-            name="estado"
-            [(ngModel)]="cidade.estado"
-            #estado="ngModel"
-            minlength="2"
-            required
-          />
-          <div
-            *ngIf="estado.errors && (estado.dirty || estado.touched)"
-            class="alert alert-danger"
-          >
-            <div [hidden]="!estado.errors?.['required']">Digite a estado.</div>
-            <div [hidden]="!estado.errors?.['minlength']">
-              O nome deve conter no minimo 2 caracteres.
-            </div>
-          </div>
-        </div>
-   
+    <select name="estado" [(ngModel)]="cidade.estado">
+      <option value="">Selecione um estado</option>
+      <option *ngFor="let estados of estados" [value]="estados.sigla">{{estados.nome}}</option>
+    </select>
+    
+        
+      
+ 
 
     <br />
 

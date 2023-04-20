@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Cidade</h2>
     <div mat-dialog-content>
         <p>Nome: {{data.nome}}</p>
-        <p>Estado: {{data.estado}}</p>
+        <p>Estado: {{ data.estado?.sigla }}</p>
     </div>
     <div mat-dialog-actions>
         <button mat-dialog-actions (click)="fechar()">Fechar</button>

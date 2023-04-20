@@ -1,60 +1,126 @@
 <h1>Nova Pessoa</h1>
 
 <div class="well">
-    <form #formPessoa="ngForm">
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome"
-                [(ngModel)]="pessoa.nome"
-                #nome="ngModel"
-                minlength="2" required>
-        <div *ngIf="nome.errors && (nome.dirty || nome.touched)" 
-        class="alert alert-danger">
-            <div [hidden]="!nome.errors?.['required']">Digite o Nome da Pessoa. </div>
-            <div [hidden]="!nome.errors?.['minlength']">O nome deve conter no minimo 2 caracteres. </div>
+  <form #formPessoa="ngForm">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        [(ngModel)]="pessoa.nome"
+        #nome="ngModel"
+        minlength="2"
+        required
+      />
+      <div
+        *ngIf="nome.errors && (nome.dirty || nome.touched)"
+        class="alert alert-danger"
+      >
+        <div [hidden]="!nome.errors?.['required']">
+          Digite o Nome da Pessoa.
         </div>
+        <div [hidden]="!nome.errors?.['minlength']">
+          O nome deve conter no minimo 2 caracteres.
         </div>
-    
-        <div class="form-group">
-            <label for="idade">Idade: </label>
-            <input type="text" class="form-control" id="idade" name="idade"
-            [(ngModel)]="pessoa.idade"
-            #idade="ngModel"
-            numerico
-            minimoValidator
-             required>
-            <div *ngIf="idade.errors && (idade.dirty || idade.touched)"
-                class="alert alert-danger">
-                <div [hidden]="!idade.errors?.['required']">Digite a Idade da Pessoa. </div>
-                <div [hidden]="!idade.errors?.['minimo']">Idade deve ser maior ou igual a 18anos. </div>
-            </div>
-          </div>
+      </div>
+    </div>
 
-          <div class="form-group">
-            <label for="dataNascimento">Data Nascimento: </label>
-            <input type="text" class="form-control" id="dataNascimento" name="dataNascimento"
-            [(ngModel)]="pessoa.dataNascimento"
-            #dataNascimento="ngModel"
-            mask="d0/M0/0000"
-             required>
-            <div *ngIf="dataNascimento.errors && (dataNascimento.dirty || dataNascimento.touched)"
-                class="alert alert-danger">
-                <div [hidden]="!dataNascimento.errors?.['required']">Digite a Data de Nascimento no formato dd/MM/yyyy. </div>
-            </div>
+    <div class="form-group">
+      <label for="idade">Idade: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="idade"
+        name="idade"
+        [(ngModel)]="pessoa.idade"
+        #idade="ngModel"
+        numerico
+        minimoValidator
+        required
+      />
+      <div
+        *ngIf="idade.errors && (idade.dirty || idade.touched)"
+        class="alert alert-danger"
+      >
+        <div [hidden]="!idade.errors?.['required']">
+          Digite a Idade da Pessoa.
         </div>
-
-        <br>
-
-        <div class="form-group">
-            <button type="button" class="btn btn-primary"
-            (click)="inserir()"
-            [disabled]="!formPessoa.form.valid">
-                <i class="fa fa-save" aria-hidden="true"></i>Salvar
-            </button>
-            <a class="btn btn-secondary"
-            [routerLink]="['/pessoas']">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>Voltar
-            </a>
+        <div [hidden]="!idade.errors?.['minimo']">
+          Idade deve ser maior ou igual a 18anos.
         </div>
-    </form>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dataNascimento">Data Nascimento: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="dataNascimento"
+        name="dataNascimento"
+        [(ngModel)]="pessoa.dataNascimento"
+        #dataNascimento="ngModel"
+        mask="d0/M0/0000"
+        required
+      />
+      <div
+        *ngIf="
+          dataNascimento.errors &&
+          (dataNascimento.dirty || dataNascimento.touched)
+        "
+        class="alert alert-danger"
+      >
+        <div [hidden]="!dataNascimento.errors?.['required']">
+          Digite a Data de Nascimento no formato dd/MM/yyyy.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="motorista">CNH:</label>
+      <br>
+      <input type="radio" class="form-check-input" id="motorista1"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista1="ngModel" value="Não"> Não <br/>
+      <input type="radio" class="form-check-input" id="motorista2"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista2="ngModel" value="A"> A <br/>
+      <input type="radio" class="form-check-input" id="motorista3"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista3="ngModel" value="B"> B <br/>
+      <input type="radio" class="form-check-input" id="motorista4"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista4="ngModel" value="C"> C <br/>
+      <input type="radio" class="form-check-input" id="motorista5"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista5="ngModel" value="D"> D <br/>
+      <input type="radio" class="form-check-input" id="motorista7"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista7="ngModel" value="AB"> AB <br/>
+      <input type="radio" class="form-check-input" id="motorista8"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista8="ngModel" value="AC"> AC <br/>
+      <input type="radio" class="form-check-input" id="motorista9"
+      name="motorista" [(ngModel)]="pessoa.motorista"
+      #motorista9="ngModel" value="AD"> AD <br/>
+  </div> 
+
+    <br />
+
+    <div class="form-group">
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="inserir()"
+        [disabled]="!formPessoa.form.valid"
+      >
+        <i class="fa fa-save" aria-hidden="true"></i>Salvar
+      </button>
+      <a class="btn btn-secondary" [routerLink]="['/pessoas']">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>Voltar
+      </a>
+    </div>
+  </form>
 </div>

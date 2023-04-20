@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Cidade } from 'src/app/shared/models/cidade.model';
 
 
-const LS_CHAVE: string = "cidades";
+const LS_CHAVE: any = "cidades";
 
 @Injectable({
   providedIn: 'root'
@@ -14,17 +14,21 @@ export class CidadeService {
 listarTodos(): Cidade[]{
   const cidades = localStorage[LS_CHAVE];
 
+  console.log("LocalStorage:", cidades);
+
   return cidades ? JSON.parse(cidades) : [];
 }
 
 inserir(cidade: Cidade): void{
   const cidades = this.listarTodos();
 
-  cidade.id = new Date().getTime();
+  cidade.id = new Date().getTime(); // adiciona a propriedade id no objeto cidade
 
   cidades.push(cidade);
 
   localStorage[LS_CHAVE] = JSON.stringify(cidades);
+
+  console.log("LocalStorage:", localStorage[LS_CHAVE]);
 }
 
 buscaPorId(id: number): Cidade | undefined{

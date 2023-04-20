@@ -17,6 +17,8 @@ export class ListarCidadeComponent implements OnInit {
               private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.cidades = this.cidadeService.listarTodos();
+    
   }
 
   listarTodos(): Cidade[] {
@@ -32,6 +34,8 @@ export class ListarCidadeComponent implements OnInit {
   }
 
   abrirModal(cidade: Cidade){
+    console.log(cidade);
+
 
     const dialogRef = this.dialog.open(ModalCidadeComponent, {
       width: '400px',
