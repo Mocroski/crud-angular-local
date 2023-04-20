@@ -18,9 +18,11 @@
         <td>{{pessoa.nome! | caixaAlta}}</td>
         <td>{{pessoa.idade}}</td>
         <td>{{pessoa.dataNascimento! | mask: 'd0/M0/0000'}}</td>
-        <td class="text-center" style="width: 300px;">
-            <button mat-raised-button (click)="abrirModal(pessoa)">Ver Detalhes</button>
-
+        <td class="text-center" >
+         <a  mat-raised-button (click)="abrirModal(pessoa)"
+          title="VerDetalhes" alt="VerDetalhes" class="btn btn-xs btn-info">
+        <i class="fa fa-edit" aria-hidden="true"></i>Ver Detalhes
+         </a>
         <a [routerLink]="['/pessoas/editar', pessoa.id]" 
         href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info">
             <i class="fa fa-edit" aria-hidden="true"></i>Editar

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Cidade } from 'src/app/shared/models/cidade.model';
 import { CidadeService } from '../services/cidade.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalCidadeComponent } from '../modal-cidade/modal-cidade.component';
 
 @Component({
   selector: 'app-listar-cidade',
@@ -11,7 +13,8 @@ export class ListarCidadeComponent implements OnInit {
 
   cidades: Cidade[] = [];
 
-  constructor(private cidadeService: CidadeService) { }
+  constructor(private cidadeService: CidadeService,
+              private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -26,5 +29,17 @@ export class ListarCidadeComponent implements OnInit {
       this.cidadeService.remover(cidade.id!);
       this.cidades = this.listarTodos();
     }
+  }
+
+  abrirModal(cidade: Cidade){
+
+    const dialogRef = this.dialog.open(ModalCidadeComponent, {
+      width: '400px',
+      data: cidade
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      console.log('Modal Fechado');
+    })
   }
 }

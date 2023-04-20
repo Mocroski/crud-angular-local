@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Pessoa</h2>
+    <div mat-dialog-content>
+      <p>Rua: {{ data.rua }}</p>
+      <p>Numero: {{ data.numero}}</p>
+      <p>Complemento {{ data.complemento}}</p>
+      <p>Bairro: {{ data.bairro}}</p>
+      <p>Cep: {{ data.cep}}</p>
+      <p>Cidade: {{ data.cidade}}</p>
+      <p>Estado: {{ data.estado}}</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="fechar()">Fechar</button>
+    </div>

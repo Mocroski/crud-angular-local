@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Estado } from 'src/app/shared';
 import { EstadoService } from '../service/estado.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalEstadoComponent } from '../modal-estado/modal-estado.component';
 
 
 @Component({
@@ -12,7 +14,8 @@ export class ListarEstadoComponent implements OnInit {
 
   estados: Estado[] = [];
 
-  constructor(private estadoService: EstadoService) { }
+  constructor(private estadoService: EstadoService,
+              private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.estados = this.listarTodos();
@@ -28,6 +31,18 @@ export class ListarEstadoComponent implements OnInit {
       this.estadoService.remover(estado.id!);
       this.estados = this.listarTodos();
     }
+  }
+
+  abrirModal(estado: Estado){
+
+    const dialogRef = this.dialog.open(ModalEstadoComponent, {
+      width: '400px',
+      data: estado
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      console.log('Modal fechado');
+    })
   }
 
 }
