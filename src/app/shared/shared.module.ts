@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MinimoValidatorDirective, NumericoDirective } from './directives';
 import { MeuPipePipe } from './pipes';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -9,7 +10,8 @@ import { MeuPipePipe } from './pipes';
   declarations: [
     MinimoValidatorDirective,
     NumericoDirective,
-    MeuPipePipe
+    MeuPipePipe,
+    NavbarComponent
   ],
   imports: [
     CommonModule
@@ -17,7 +19,8 @@ import { MeuPipePipe } from './pipes';
   exports: [
     MinimoValidatorDirective,
     NumericoDirective,
-    MeuPipePipe
+    MeuPipePipe,
+    NavbarComponent
   ]
 })
 export class SharedModule { }
