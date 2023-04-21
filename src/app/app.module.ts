@@ -16,6 +16,7 @@ import { EditarEstadoComponent } from './estado/editar-estado/editar-estado.comp
 import { InserirEstadoComponent } from './estado/inserir-estado/inserir-estado.component';
 import { EstadoModule } from './estado/estado.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CidadeModule,
     EstadoModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

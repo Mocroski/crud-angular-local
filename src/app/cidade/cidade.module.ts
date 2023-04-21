@@ -8,6 +8,8 @@ import { EditarCidadeComponent } from './editar-cidade/editar-cidade.component';
 import { InserirCidadeComponent } from './inserir-cidade/inserir-cidade.component';
 import { ModalCidadeComponent } from './modal-cidade/modal-cidade.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -22,7 +24,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
+    NgSelectModule
+
   ],
   providers: [
     CidadeService

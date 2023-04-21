@@ -1263,6 +1263,13 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
+"@ng-select/ng-select@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@ng-select/ng-select/-/ng-select-7.0.0.tgz#f4c62f1803216ac98a9175362317302c09d90f5b"
+  integrity sha512-YKQcohssQzLZgItCsEb0vbJR6xGRTIVq4FRp+5M7fkaX7wWM+o2o1R4LxsiWhz0CKajslkoR0VDytyiumf8QiQ==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@12.2.18":
   version "12.2.18"
   resolved "https://registry.npmjs.org/@ngtools/webpack/-/webpack-12.2.18.tgz"
@@ -7209,7 +7216,7 @@ tslib@^1.10.0, tslib@^1.9.0:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.1.0, tslib@^2.2.0, tslib@^2.3.0:
+tslib@^2.0.0, tslib@^2.1.0, tslib@^2.2.0, tslib@^2.3.0:
   version "2.5.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.5.0.tgz"
   integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
