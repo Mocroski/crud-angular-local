@@ -38,16 +38,6 @@ component: InserirPessoaComponent},
  component: EditarPessoaComponent
 },
 
-{ path: '',
-redirectTo: 'enderecos/listar',
-pathMatch: 'full'
-},
-
-{ 
-  path: 'enderecos',
-redirectTo: 'enderecos/listar',
-},
-
 {
   path: 'enderecos/listar',
   component: ListarEnderecoComponent
@@ -61,11 +51,6 @@ redirectTo: 'enderecos/listar',
 {
   path: 'enderecos/editar/:id',
   component: EditarEnderecoComponent
-},
-
-{ 
-  path: 'cidades',
-redirectTo: 'cidades/listar',
 },
 
 {
@@ -83,10 +68,6 @@ redirectTo: 'cidades/listar',
   component: InserirCidadeComponent
 },
 
-{ 
-  path: 'estados',
-redirectTo: 'estados/listar',
-},
 
 {
   path: 'estados/listar',

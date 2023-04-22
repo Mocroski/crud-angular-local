@@ -17,6 +17,7 @@ import { InserirEstadoComponent } from './estado/inserir-estado/inserir-estado.c
 import { EstadoModule } from './estado/estado.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     EstadoModule,
     SharedModule,
     BrowserAnimationsModule,
-    NgSelectModule
+    NgSelectModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
