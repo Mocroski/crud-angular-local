@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Estado } from 'src/app/shared/models/estado.model';
 
 const LS_CHAVE: any = "estados";
-
+const estados: Estado[] = [];
 @Injectable({
   providedIn: 'root'
 })

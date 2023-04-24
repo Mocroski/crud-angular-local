@@ -10,6 +10,7 @@ import { ModalCidadeComponent } from './modal-cidade/modal-cidade.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { CidadeRoutingModule } from './cidade-routing/cidade-routing.module';
 
 
 
@@ -26,7 +27,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     FormsModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
-    NgSelectModule
+    NgSelectModule,
+    CidadeRoutingModule
 
   ],
   providers: [

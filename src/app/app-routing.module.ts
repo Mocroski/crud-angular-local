@@ -1,90 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ListarPessoaComponent } from './pessoa/listar-pessoa/listar-pessoa.component';
-import { InserirPessoaComponent } from './pessoa/inserir-pessoa/inserir-pessoa.component';
-import { EditarPessoaComponent } from './pessoa/editar-pessoa/editar-pessoa.component';
-import { ListarEnderecoComponent } from './endereco/listar-endereco/listar-endereco.component';
-import { InserirEnderecoComponent } from './endereco/inserir-endereco/inserir-endereco.component';
-import { EditarEnderecoComponent } from './endereco/editar-endereco/editar-endereco.component';
-import { ListarCidadeComponent } from './cidade/listar-cidade/listar-cidade.component';
-import { EditarCidadeComponent } from './cidade/editar-cidade/editar-cidade.component';
-import { InserirCidadeComponent } from './cidade/inserir-cidade/inserir-cidade.component';
-import { InserirEstadoComponent } from './estado/inserir-estado/inserir-estado.component';
-import { EditarEstadoComponent } from './estado/editar-estado/editar-estado.component';
-import { ListarEstadoComponent } from './estado/listar-estado/listar-estado.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '',
-redirectTo: 'pessoas/listar',
-pathMatch: 'full'
-},
-
-{ 
-  path: 'pessoas',
-redirectTo: 'pessoas/listar',
-},
-
-{ 
-  path: 'pessoas/listar',
-component: ListarPessoaComponent
-},
-
-{ 
-  path: 'pessoas/novo',
-component: InserirPessoaComponent},
-
-{
- path: 'pessoas/editar/:id',
- component: EditarPessoaComponent
-},
-
-{
-  path: 'enderecos/listar',
-  component: ListarEnderecoComponent
-},
-
-{
-  path: 'enderecos/novo',
-  component: InserirEnderecoComponent
-},
-
-{
-  path: 'enderecos/editar/:id',
-  component: EditarEnderecoComponent
-},
-
-{
-  path: 'cidades/listar',
-  component: ListarCidadeComponent
-},
-
-{
-  path: 'cidades/editar/:id',
-  component: EditarCidadeComponent
-},
-
-{
-  path: 'cidades/novo',
-  component: InserirCidadeComponent
-},
-
-
-{
-  path: 'estados/listar',
-  component: ListarEstadoComponent
-},
-
-{
-  path: 'estados/editar/:id',
-  component: EditarEstadoComponent
-},
-
-{
-  path: 'estados/novo',
-  component: InserirEstadoComponent
-}
-]
-  
+  { path: '', component: HomeComponent },
+  { path: 'cidades', loadChildren: () => import('./cidade/cidade.module').then(m => m.CidadeModule) },
+  { path: 'enderecos', loadChildren:() => import('./endereco/endereco.module').then(m => m.EnderecoModule) },
+  {path: 'estados', loadChildren:() => import('./estado/estado.module').then(m => m.EstadoModule)},
+  {path: 'pessoas', loadChildren:() => import('./pessoa/pessoa.module').then(m => m.PessoaModule)}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

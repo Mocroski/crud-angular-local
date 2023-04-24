@@ -10,6 +10,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { SharedModule } from '../shared';
 import { ModalPessoaComponent } from './modal-pessoa/modal-pessoa.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PessoaRoutingModule } from './pessoa-routing/pessoa-routing.module';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -21,12 +22,12 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     ModalPessoaComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    NgxMaskModule.forRoot(),
-    SharedModule,
-    MatDialogModule
+   CommonModule,
+   FormsModule,
+   NgxMaskModule.forRoot(),
+   SharedModule,
+   MatDialogModule,
+   PessoaRoutingModule
   ],
   providers: [
     PessoaService

@@ -18,11 +18,13 @@ import { EstadoModule } from './estado/estado.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { AuthModule } from './auth/auth.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { AuthModule } from './auth/auth.module';
     SharedModule,
     BrowserAnimationsModule,
     NgSelectModule,
-    AuthModule
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
