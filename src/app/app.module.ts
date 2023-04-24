@@ -19,12 +19,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { AuthModule } from './auth/auth.module';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +35,10 @@ import { HomeComponent } from './home/home.component';
     EnderecoModule,
     CidadeModule,
     EstadoModule,
+    AuthModule,
     SharedModule,
     BrowserAnimationsModule,
     NgSelectModule,
-    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

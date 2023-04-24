@@ -9,6 +9,7 @@ import { EnderecoService } from './services/endereco.service';
 import { SharedModule } from '../shared';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { ModalEnderecoComponent } from './modal-endereco/modal-endereco.component';
+import { EnderecoRoutingModule } from './endereco-routing/endereco-routing.module';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -24,7 +25,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     RouterModule,
     FormsModule, 
     SharedModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    EnderecoRoutingModule
   ],
   providers: [
     EnderecoService

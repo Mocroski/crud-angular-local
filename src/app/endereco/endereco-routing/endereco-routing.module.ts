@@ -6,27 +6,10 @@ import { InserirEnderecoComponent } from '../inserir-endereco/inserir-endereco.c
 import { EditarEnderecoComponent } from '../editar-endereco/editar-endereco.component';
 
 const routes: Routes = [
-  
-  {
-    path: 'enderecos',
-    redirectTo: 'enderecos/listar'
-  },
-    {
-      path: 'enderecos/listar',
-      component: ListarEnderecoComponent
-    },
-    
-    {
-      path: 'enderecos/novo',
-      component: InserirEnderecoComponent
-    },
-    
-    {
-      path: 'enderecos/editar/:id',
-      component: EditarEnderecoComponent
-    },
-  
-]
+  { path: '', component: ListarEnderecoComponent },
+  { path: 'novo', component: InserirEnderecoComponent },
+  { path: 'editar/:id', component: EditarEnderecoComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

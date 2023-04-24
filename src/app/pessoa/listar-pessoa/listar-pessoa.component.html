@@ -7,6 +7,7 @@
             <th>Idade</th>
             <th>Data Nascimento</th>
             <th>Possui CNH</th>
+            <th>Fumante</th>
             <th class="text-center">
                 <a [routerLink]="['/pessoas/novo']" 
                 href="#" title="Novo" alt="Novo" class="btn btn-xs btn-sucess">
@@ -20,6 +21,7 @@
         <td>{{pessoa.idade}}</td>
         <td>{{pessoa.dataNascimento! | mask: 'd0/M0/0000'}}</td>
         <td> {{pessoa.motorista! ? pessoa.motorista : "Não" }} </td>
+        <td>{{pessoa.fumante! ? "Fumante" : "Não Fumante"}}</td>
         <td class="text-center" >
          <a  mat-raised-button (click)="abrirModal(pessoa)"
           title="VerDetalhes" alt="VerDetalhes" class="btn btn-xs btn-info">

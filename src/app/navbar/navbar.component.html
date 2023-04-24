@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <span>Home</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <a class="nav-link"  routerLink="/pessoas" routerLinkActive="active">Pessoas</a>
+      </button>
+      <button mat-menu-item>
+        <a class="nav-link" routerLink="/enderecos" routerLinkActive="active">Endereços</a>
+      </button>
+      <button mat-menu-item>
+        <a class="nav-link" routerLink="/cidades" routerLinkActive="active">Cidades</a>
+      </button>
+      <button mat-menu-item>
+        <a class="nav-link" routerLink="/estados" routerLinkActive="active">Estados</a>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  

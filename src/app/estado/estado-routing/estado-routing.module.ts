@@ -6,25 +6,10 @@ import { EditarEstadoComponent } from '../editar-estado/editar-estado.component'
 import { InserirEstadoComponent } from '../inserir-estado/inserir-estado.component';
 
 const routes: Routes = [
-  {
-    path: 'estados',
-    redirectTo: 'estados/listar'
-  },
-  {
-    path: 'estados/listar',
-    component: ListarEstadoComponent
-  },
-  
-  {
-    path: 'estados/editar/:id',
-    component: EditarEstadoComponent
-  },
-  
-  {
-    path: 'estados/novo',
-    component: InserirEstadoComponent
-  }
-]
+  { path: '', component: ListarEstadoComponent },
+  { path: 'novo', component: InserirEstadoComponent },
+  { path: 'editar/:id', component: EditarEstadoComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
